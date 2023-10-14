@@ -6,38 +6,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     background-color: #333; /* Background color of the menu bar */
 }
 
-.menu-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px; /* Adjust the height as needed */
+.menu li {
+    display: inline; /* Display items horizontally */
 }
 
-.menu-bar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-.menu-bar li {
-    margin: 0 20px; /* Adjust the spacing between menu items */
-}
-
-.menu-bar a {
+.menu li a {
+    display: block;
+    color: white; /* Text color for menu items */
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
 }
 
-/* Style for hover effect */
-.menu-bar a:hover {
-    text-decoration: underline;
+.menu li a:hover {
+    background-color: #555; /* Background color when hovering */
 }
 
 
