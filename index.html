@@ -1,38 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Background with Text</title>
+    <link rel="stylesheet" href="styles.css">
+	<script>
+    // Function to resize the video to fit the window
+    function resizeVideo() {
+        const video = document.getElementById('video-bg');
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const videoAspect = video.videoWidth / video.videoHeight;
+        const windowAspect = windowWidth / windowHeight;
+        if (windowAspect > videoAspect) {
+            video.style.width = windowWidth + 'px';
+            video.style.height = (windowWidth / videoAspect) + 'px';
+        } else {
+            video.style.width = (windowHeight * videoAspect) + 'px';
+            video.style.height = windowHeight + 'px';
         }
+    }
 
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
-	<title> Welcome to H.W.W World </title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	
+    // Call the resizeVideo function on page load and when the window is resized
+    window.addEventListener('load', resizeVideo);
+    window.addEventListener('resize', resizeVideo);
+</script>
+
 </head>
 <body>
-    <video autoplay muted loop id="background-video">
+    <video id="video-bg" autoplay loop muted>
         <source src="Tech_background.mp4" type="video/mp4">
         Your browser does not support the video tag.
-			 
     </video>
-    <h1>This is an H1 Heading</h1>
-    <h2>This is an H2 Heading</h2>
-    <h3>This is an H3 Heading</h3>
-    <h4>This is an H4 Heading</h4>
-    <h5>This is an H5 Heading</h5>
-    <h6>This is an H6 Heading</h6>
-   
+    <div class="text-container">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a video background with text.</p>
+    </div>
 </body>
 </html>
