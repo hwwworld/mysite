@@ -7,23 +7,7 @@ body {
 }
 
 /* Customize the appearance of the language selector */
-.goog-te-menu-value {
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-}
 
-/* Customize the appearance of the translation button */
-.goog-te-button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-}
-
-/* Customize the appearance of the selected language */
-.goog-te-menu-value span {
-    color: #ffcc00; /* Finnish language color */
-}
 
 
 .menu {
