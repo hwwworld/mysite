@@ -1,89 +1,100 @@
-/* styles.css */
-body {
+/* Reset default margin and padding */
+body, ul {
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
 }
 
-/* Customize the appearance of the language selector */
+/* Define the header and navigation styles */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+}
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo {
+    font-size: 24px;
+}
 
 .menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333; /* Background color of the menu bar */
+    list-style: none;
+    display: flex;
 }
 
 .menu li {
-    display: inline; /* Display items horizontally */
+    margin-right: 20px;
 }
 
-.menu li a {
-    #display: block;
-    color: white; /* Text color for menu items */
-    text-align: center;
-    padding: 14px 16px;
+.menu a {
     text-decoration: none;
+    color: #fff;
 }
 
-.menu li a:hover {
-    background-color: #555; /* Background color when hovering */
-}
-
-/* Style the mobile menu icon */
-.mobile-menu-icon {
-  display: block; /* Display the icon */
-  cursor: pointer;
-}
-
-/* When the menu icon is clicked, show the menu items */
-.mobile-menu-icon.clicked + .menu {
-  display: block;
-}
-
-/* Add styles for the mobile menu */
-.menu {
-  /* Styling for the mobile menu items */
-}
-
-/* Media query to make the menu visible on smaller screens */
-@media screen and (max-width: 768px) {
-  .menu {
+/* Mobile menu styles */
+.menu-toggle {
     display: none;
-  }
-
-  .mobile-menu-icon {
-    display: block; /* Display the icon on small screens */
-  }
+    flex-direction: column;
+    cursor: pointer;
 }
 
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
 
-#video-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* Video container styles */
+.video-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    z-index: -1; /* Place the video behind other content */
 }
 
-.text-container {
+.video-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
-h1 {
-    font-size: 2rem;
+.video-content h1 {
+    font-size: 24px;
 }
 
-p {
-    font-size: 1.2rem;
+.video-content p {
+    font-size: 18px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu.active {
+        display: flex;
+    }
 }
