@@ -1,15 +1,4 @@
 /* styles.css */
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-/* Customize the appearance of the language selector */
-
-
-
 .home-container {
   width: 100%;
   display: flex;
