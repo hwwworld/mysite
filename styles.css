@@ -90,7 +90,6 @@ header {
         display: none;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.5);
-        #position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
