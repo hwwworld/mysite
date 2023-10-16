@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="styles.css">
 <style>
 div.gallery {
   margin: 5px;
@@ -25,6 +26,18 @@ div.desc {
 </style>
 </head>
 <body>
+
+<section class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="Tech_background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-content">
+		     
+            <h1>AWS Cloud Achievements</h1>
+            
+        </div>
+    </section>
 
 <div class="gallery">
   <a target="_blank" href="AWS/ecs.jpeg">
@@ -53,7 +66,7 @@ div.desc {
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
 
