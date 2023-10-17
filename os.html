@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<style>
+div.gallery {
+  margin: 5px;
+  #border: 1px solid #ccc;
+  float: left;
+  width: 300px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<section class="video-container">
+        <video autoplay muted loop class="background-video">
+            <source src="tech_background2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="video-content">
+		     
+            <h1>Operating Systems Management</h1>
+			<div class="gallery">
+				<a target="_blank" href="OS/windows.png">
+				<img src="OS/windows.png" alt="windows" width="1000" height="668">
+				</a>
+				<div class="desc">Windows Server Management and Security</div>
+			</div>
+
+			<div class="gallery">
+				<a target="_blank" href="OS/linux.png">
+				<img src="OS/linux.png" alt="Linux" width="1000" height="668">
+				</a>
+				<div class="desc">Linux Server Management and Security</div>
+			</div>
+
+			
+            
+        </div>
+    </section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
